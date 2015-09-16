@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lzh.activity.DownloadManageActivity" 
+    android:orientation="vertical">
+   
+    <RelativeLayout
+       android:id="@+id/download_titlebar"
+       android:layout_height="0dp"
+       android:layout_width="fill_parent"
+       android:layout_weight="1.0"
+       android:background="@drawable/titlebar">
+       <ImageButton 
+           android:id="@+id/download_back"
+           android:layout_width="70dp"
+           android:layout_height="55dp"
+           android:layout_centerVertical="true"
+           android:layout_marginLeft="5dp"
+           android:background="@drawable/back_activity_btn"/>
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:textSize="16sp"
+           android:textColor="@color/app_green"
+           android:text="@string/download_manage"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/controller_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0">
+        <ImageButton 
+            android:id="@+id/download_manage_btn"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:id="@+id/manage_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+             android:textColor="@color/app_green"
+            android:layout_centerInParent="true"/>
+     </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.0" />
+
+</LinearLayout>

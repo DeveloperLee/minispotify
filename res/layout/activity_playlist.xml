@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lzh.activity.PlaylistActivity" 
+    android:orientation="vertical">
+    
+    <RelativeLayout
+       android:id="@+id/download_titlebar"
+       android:layout_height="0dp"
+       android:layout_width="fill_parent"
+       android:layout_weight="1.0"
+       android:background="@drawable/titlebar">
+       <ImageButton 
+           android:id="@+id/back"
+           android:layout_width="70dp"
+           android:layout_height="55dp"
+           android:layout_centerVertical="true"
+           android:layout_marginLeft="5dp"
+           android:background="@drawable/back_activity_btn"/>
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:textSize="16sp"
+           android:text="@string/playlist"/>
+    </RelativeLayout> 
+    
+    <RelativeLayout
+        android:id="@+id/controller_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0">
+        <ImageButton 
+            android:id="@+id/playlist_manage_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/add_to_list"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/manage_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/gray"
+            android:layout_toRightOf="@+id/playlist_manage_btn"
+            android:text="@string/manage_playlist"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"/>
+     </RelativeLayout>
+     
+    
+     <RelativeLayout 
+        android:id="@+id/playlist_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.0" >
+      <ListView 
+        android:id="@+id/playlist_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:footerDividersEnabled="true"
+        android:fadeScrollbars="true"
+        android:listSelector="@drawable/music_list_selector">
+      </ListView>
+    </RelativeLayout>
+
+
+</LinearLayout>

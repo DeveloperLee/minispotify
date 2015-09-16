@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+     <RelativeLayout 
+        android:id="@+id/home_gallary_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <ImageSwitcher 
+            android:id="@+id/home_img_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+        </ImageSwitcher>
+    </RelativeLayout>
+    
+      <RelativeLayout 
+        android:id="@+id/home_pic_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+        
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/playlist_info_bg"
+            android:scaleType="fitXY"/>
+        <RelativeLayout
+            android:id="@+id/home_music_status"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            >
+            
+            <com.lzh.component.CircleImageView
+                android:id="@+id/home_userhead"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/user_not_login"
+                android:clickable="true"
+                app:border_width="2dp"
+                app:border_color="#ffffff"/>
+            <TextView 
+                android:id="@+id/home_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/gray"
+                android:text="@string/not_login"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/home_userhead"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/home_usergroup"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_toRightOf="@+id/home_username"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+         <RelativeLayout
+                android:id="@+id/home_music_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/home_music_status"
+                android:background="@drawable/info_area">
+        <ImageView
+                android:id="@+id/home_music_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/now_play"
+                android:visibility="gone"/>
+         <TextView
+                android:id="@+id/home_music_status_mname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/home_music_view"/>
+         <TextView
+                android:id="@+id/home_music_status_aname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/home_music_status_mname"
+                android:layout_marginLeft="5dp"/>
+       </RelativeLayout> 
+    </RelativeLayout>
+    <LinearLayout 
+        android:id="@+id/home_navigation_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/home_to_music"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_btn"
+            >
+             <ImageView 
+                android:id="@+id/home_music_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/download_manage"
+                android:layout_centerInParent="true"/>
+             <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/download_manage"
+                android:layout_below="@+id/home_music_pic"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        
+         <ImageView 
+             android:layout_height="match_parent"
+             android:layout_width="1dp"
+             android:background="@drawable/top_selector_bg"/>
+         
+         <RelativeLayout
+            android:id="@+id/home_to_favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_btn"
+            >
+            <ImageView 
+                android:id="@+id/home_fav_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/fav_manage"
+                android:layout_centerInParent="true"/>
+             <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_fav"
+                android:layout_below="@+id/home_fav_pic"
+                android:layout_centerHorizontal="true"/> 
+             
+         </RelativeLayout>
+        
+    </LinearLayout>
+    
+     <!-- 布局之间的分割线 -->
+     <ImageView 
+             android:layout_height="1dp"
+             android:layout_width="match_parent"
+             android:background="@drawable/top_selector_bg"/>
+     
+     <LinearLayout 
+        android:id="@+id/home_navigation_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/home_to_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_btn"
+            >
+            
+            <ImageView 
+                android:id="@+id/home_list_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/quick_play"
+                android:layout_centerInParent="true"/>
+             <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_list"
+                android:layout_below="@+id/home_list_pic"
+                android:layout_centerHorizontal="true"/> 
+             
+            
+            
+        </RelativeLayout>
+        
+          <!-- 布局之间的分割线 -->
+          <ImageView 
+             android:layout_height="match_parent"
+             android:layout_width="1dp"
+             android:background="@drawable/top_selector_bg"/>
+             
+         <RelativeLayout
+            android:id="@+id/home_to_settings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_btn"
+            >
+             
+              <ImageView 
+                android:id="@+id/home_settings_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/playlist"
+                android:layout_centerInParent="true"/>
+             <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/playlist"
+                android:layout_below="@+id/home_settings_pic"
+                android:layout_centerHorizontal="true"/>  
+             
+             
+             
+         </RelativeLayout>
+        
+    </LinearLayout>
+    
+    
+    
+
+</LinearLayout>

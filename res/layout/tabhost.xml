@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/backgroundcolor"
+        android:orientation="vertical" >
+         
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+         <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/tag_bg"
+            android:layout_marginTop="0.0dip"
+            android:paddingLeft="7.0dip"
+            android:paddingRight="7.0dip" >
+
+            <RadioGroup
+                android:id="@+id/main_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_home"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/home"
+                    android:text="主页" />
+
+                <RadioButton
+                    android:id="@+id/radio_mention"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/local"
+                    android:text="本地音乐" />
+
+                <RadioButton
+                    android:id="@+id/radio_person_info"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/online"
+                    android:text="在线音乐" />
+
+                <RadioButton
+                    android:id="@+id/radio_more"
+                    style="@style/main_tab_bottom"
+                    android:drawableTop="@drawable/settings"
+                    android:text="设置" />
+            </RadioGroup>
+        </FrameLayout>
+    </LinearLayout>
+   
+</TabHost>

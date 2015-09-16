@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <CheckBox 
+        android:id="@+id/delete_check"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:button="@drawable/check_box_btn"
+        android:layout_marginLeft="5dp "
+        android:layout_centerVertical="true"/>
+    <ImageView 
+        android:id="@+id/album_pic"
+        android:scaleType="fitXY"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/delete_check"
+        android:layout_marginLeft="5dp"/>
+    
+    <TextView 
+        android:id="@+id/music_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/album_pic"/>
+    
+     <TextView 
+        android:id="@+id/artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/music_name"
+        android:textSize="10dp"
+        android:textColor="#999999"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/album_pic"/>
+     
+     <ImageView 
+        android:id="@+id/isDownload"
+        android:layout_toRightOf="@+id/artist_name"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="3dp"
+        android:layout_below="@+id/music_name"/>
+     
+     <TextView
+         android:id="@+id/duration"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="15dp"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+         android:layout_marginRight="10dp"
+         android:textColor="#000000"/>
+   
+</RelativeLayout>

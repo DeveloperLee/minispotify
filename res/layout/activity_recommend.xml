@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lzh.activity.RecommendActivity"
+    android:orientation="vertical">
+    
+      
+   <RelativeLayout 
+        android:id="@+id/recommend_pic"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.0">
+        <RelativeLayout
+            android:id="@+id/playlist_info"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/info_area">
+            <TextView
+                android:id="@+id/recommend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"
+                android:textColor="#ffffff"/>
+            <ImageButton 
+                android:id="@+id/back"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:background="@drawable/back_activity_btn"
+                android:layout_centerVertical="true"/>
+             <ImageButton 
+                android:id="@+id/recommend_play"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/recommend_play_btn"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+        </RelativeLayout>
+      </RelativeLayout>
+    
+     <RelativeLayout
+        android:layout_weight="6.5"
+        android:layout_height="0dp"
+        android:layout_width="fill_parent">
+       <ImageView 
+        android:id="@+id/recommend_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/divider_bg"
+        android:scaleType="fitXY"/>
+       <ListView
+         android:id="@+id/recommend_list"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/recommend_divider"
+         android:divider="@drawable/list_divider"
+         android:listSelector="@drawable/top_selector_bg"
+         android:cacheColorHint="#00000000"
+         android:fadeScrollbars="true">
+       </ListView>
+     </RelativeLayout>
+
+
+</LinearLayout>

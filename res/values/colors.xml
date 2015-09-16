@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundcolor">#fff0f1f1</color>
+    <color name="gray">#ff8aaef2</color>
+    <color name="text_hint_color">#ff9c9d9d</color>
+    <color name="app_green">#86BA2E</color>
+</resources>

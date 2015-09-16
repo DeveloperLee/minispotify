@@ -1,0 +1,56 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="main_tab_bottom">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textColor">#ff404142</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/tabs_btn_bg</item>
+        <item name="android:paddingTop">1.0dip</item>
+        <item name="android:paddingBottom">1.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">2.0dip</item>
+        <item name="android:layout_marginBottom">2.0dip</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">-1.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style
+    	name="selectorDialog"
+    	parent="@android:style/Theme.Dialog">
+    	<item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@drawable/dialog_bg</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+    <style name="comm_controls">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_marginLeft">0.0dip</item>
+        <item name="android:layout_marginTop">2.0dip</item>
+        <item name="android:layout_marginRight">0.0dip</item>
+        <item name="android:layout_marginBottom">2.0dip</item>
+    </style>
+
+</resources>
